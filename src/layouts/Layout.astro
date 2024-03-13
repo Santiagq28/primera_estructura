@@ -2,6 +2,7 @@
 interface Props {
 	title: string;
 }
+import { Icon } from 'astro-icon/components';
 
 const { title } = Astro.props;
 const products = [
@@ -31,9 +32,23 @@ const products = [
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="header">
-			<div class="container header_info">
-				Contenido de la Cabecera
+		<div class="bg-zinc-800">
+			<div class="container flex items-center">
+				<img src="/public/aliexpress_logo2.png" class="h-16" />
+				<div class="relative">
+					<input placeholder="Buscar..." class="h-9 rounded-full pl-5 outline-none pr-14" >
+					<div class="bg-zinc-800 right-1 top-[2px] absolute inline-block text-white rounded-xl py-1 px-2">
+						<Icon name="mdi:search" class="size-6"/>
+					</div>
+				</div>
+				<div class="relative leading-5">
+					<div class="flex pl-8">
+						<Icon name="mdi:qrcode" class="text-white size-8 mt-2"/>
+						<p class="text-white text-[12px] pt-1 w-[100px]">Descarga la app de Aliexpress</p>
+					</div>
+					
+				</div>
+				
 			</div>
 		</div>
 		<div class="container banner">
@@ -62,13 +77,7 @@ const products = [
 	</body>
 </html>
 <style is:global>
-	.header{
-		background-color: orange;
-	}
-	.header_info{
-		height: 80px;
-
-	}
+	
 	.banner{
 		height: 240px;
 	}
@@ -109,16 +118,8 @@ const products = [
 		border-radius: 4px;
 		margin-right: 3px;
 	}
-	.categories{
-		200px
-	}
 	.footer{
 		height: 80px;
-	}
-	.container{
-		max-width: 1280px;
-		/*background-color: blue;*/
-		margin: 0 auto;
 	}
 	
 	html,body {

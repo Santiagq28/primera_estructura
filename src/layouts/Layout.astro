@@ -33,10 +33,12 @@ const products = [
 	</head>
 	<body>
 		<div class="bg-zinc-800">
-			<div class="container flex items-center">
+			<div class="flex items-center justify-center">
 				<img src="/public/aliexpress_logo2.png" class="h-16" />
-				<div class="relative">
-					<input placeholder="Buscar..." class="h-9 rounded-full pl-5 outline-none pr-14" >
+					
+
+				<div class="relative w-[50%]">
+					<input placeholder="Buscar..." class="h-9 rounded-full pl-5 outline-none pr-14 w-full" >
 					<div class="bg-zinc-800 right-1 top-[2px] absolute inline-block text-white rounded-xl py-1 px-2">
 						<Icon name="mdi:search" class="size-6"/>
 					</div>
@@ -47,15 +49,76 @@ const products = [
 						<p class="text-white text-[12px] pt-1 w-[100px]">Descarga la app de Aliexpress</p>
 					</div>
 					
+					
+					
 				</div>
+				<div class="flex pl-8">
+						<Icon name="flagpack:co" class="text-white size-7 mt-2"/>
+						<p class="text-white text-[12px] pt-1 ml-2 w-[40px]">ES/ <b>COP</b> ▼</p>
+					</div>
+
+
+					<a class="h-7 group flex relative rounded-full px-4 text-white w-66 mr-6 pb-10"  href="#" >
+						<Icon name="mdi:user-outline" class="text-white size-9 mt-2"/>
+						<p class="text-white text-[12px] pt-1 ml-2 w-[160px]">¡Bienvenido <br><b>Identifícate / Regístrate </b>▼</p>
+						<menu class="hidden group-hover:block left-0 top-7 w-36 absolute bg-zinc-800">
+							<ul>
+								<li>opcion 1</li>
+								<li>opcion 2</li>
+								<li>opcion 3</li>
 				
+							</ul>
+						</menu>
+					</a>
+					<div class="flex pl-8">
+						</div>
 			</div>
 		</div>
-		<div class="container banner">
-			BANNER
+		<div class="bg-zinc-800">
+			<div class="flex items-center justify-center p-3">
+				<div class="items-center">
+					<a class="h-10 group flex relative text-lg rounded-full text-center p-1 px-8 text-white w-100 mr-6 bg-zinc-600 items-center" href="#" >
+					<Icon name="mdi:menu" class="text-white size-6 mr-2"/>
+					Todas las categorías ▼
+						<menu class="hidden group-hover:block left-0 top-7 w-36 absolute bg-zinc-50 text-black">
+							<ul>
+								<li>opcion 1</li>
+								<li>opcion 2</li>
+								<li>opcion 3</li>
+				
+							</ul>
+						</menu>
+					</a>
+				</div>
+				<nav class="flex gap-1 text-white">
+					<a href="" class="px-5 py-2">NN</a>
+					<a href="" class="px-5 py-2">Superventas</a>
+					<a href="#" class="px-5 py-2">Mejores Marcas</a>
+					<a href="#" class="px-5 py-2"> Hogar y jardin</a>
+					<a href="#" class="px-5 py-2">Cabello y pelucas</a>
+					<a href="#" class="px-5 py-2">Moda hombre</a>
+					<a href="#" class="px-5 py-2">Accesorios</a>
+					<a href="#" class="px-5 py-2">Electrónica</a>
+					<a href="#" class="px-5 py-2">Hogar e iluminación</a>
+					<a class="px-5 py-2 group flex relative rounded-full text-center text-white items-center" href="#" >
+						Más ▼
+						<menu class="hidden group-hover:block left-0 top-7 w-36 absolute bg-zinc-50 text-black">
+							<ul>
+								<li>opcion 1</li>
+								<li>opcion 2</li>
+								<li>opcion 3</li>
+				
+							</ul>
+						</menu>
+					</a>
+				</nav>
+			</div>
 		</div>
-		<nav class="container main_menu">
-			<a href="/">Inicio</a> <a href="productos">Productos</a>
+		<slot />
+		
+		<!-- <nav class="container main_menu">
+			<a href="/">Inicio</a> 
+			<a href="productos">Productos</a>
 		</nav>
 		<div class="container product_list">
 			{
@@ -69,11 +132,13 @@ const products = [
 			Categorías
 		</div>
 		<div class="container">
-			<slot />
+			
 		</div>
 		<div class="container footer">
 			ESTE ES EL FOOTER
-		</div>
+		</div>-->
+
+		
 	</body>
 </html>
 <style is:global>
@@ -137,5 +202,9 @@ const products = [
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	nav a:hover{
+		background-color: rgb(90, 90, 90);
+		border-radius: 20px;
 	}
 </style>
